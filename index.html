@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="VIP Mail - بريد إلكتروني يضع الأمان والخصوصية أولاً. احصل على بريدك المميز @vipm.org">
-    <meta property="og:title" content="VIP Mail - بريد إلكتروني آمن ومميز">
-    <meta property="og:description" content="احصل على بريد مميز مثل yourname@vipm.org وكن في مستوى النخبة الرقمية">
-    <title>VIP Mail - بريد إلكتروني آمن ومميز</title>
+    <meta name="description" content="VIP Mail - Email that puts security and privacy first. Get your premium @vipm.org email">
+    <meta property="og:title" content="VIP Mail - Secure and Premium Email">
+    <meta property="og:description" content="Get a premium email like yourname@vipm.org and be at the digital elite level">
+    <title>VIP Mail - Secure and Premium Email</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <script src="translations.js"></script>
 </head>
 <body>
     <!-- Navbar -->
@@ -28,15 +29,19 @@
                 </a>
 
                 <div class="nav-links">
-                    <a href="#features">المزايا</a>
-                    <a href="#pricing">الأسعار</a>
-                    <a href="about.html">من نحن</a>
-                    <button class="btn-login">تسجيل الدخول</button>
-                    <button class="btn-primary">احجز بريدك الآن</button>
+                    <a href="#features" data-i18n="nav_features">Features</a>
+                    <a href="#pricing" data-i18n="nav_pricing">Pricing</a>
+                    <a href="about.html" data-i18n="nav_about">About Us</a>
+                    <div class="lang-switcher">
+                        <button class="lang-btn" id="lang-en">EN</button>
+                        <button class="lang-btn" id="lang-ar">AR</button>
+                    </div>
+                    <button class="btn-login" data-i18n="nav_login">Sign In</button>
+                    <button class="btn-primary" data-i18n="nav_book">Book Your Email</button>
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <button class="mobile-menu-btn" aria-label="القائمة">
+                <button class="mobile-menu-btn" aria-label="Menu" data-i18n-label="nav_menu">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="4" x2="20" y1="12" y2="12"/>
                         <line x1="4" x2="20" y1="6" y2="6"/>
@@ -50,11 +55,15 @@
     <!-- Mobile Menu -->
     <div class="mobile-menu">
         <div class="mobile-menu-links">
-            <a href="#features">المزايا</a>
-            <a href="#pricing">الأسعار</a>
-            <a href="about.html">من نحن</a>
-            <button class="btn-login">تسجيل الدخول</button>
-            <button class="btn-primary">احجز بريدك الآن</button>
+            <a href="#features" data-i18n="nav_features">Features</a>
+            <a href="#pricing" data-i18n="nav_pricing">Pricing</a>
+            <a href="about.html" data-i18n="nav_about">About Us</a>
+            <div class="lang-switcher" style="justify-content: center; margin: 1rem 0;">
+                <button class="lang-btn" id="lang-en-mobile">EN</button>
+                <button class="lang-btn" id="lang-ar-mobile">AR</button>
+            </div>
+            <button class="btn-login" data-i18n="nav_login">Sign In</button>
+            <button class="btn-primary" data-i18n="nav_book">Book Your Email</button>
         </div>
     </div>
 
@@ -70,24 +79,24 @@
             <div class="hero-content">
                 <div class="hero-badge">
                     <span class="badge-pulse"></span>
-                    <span>البريد الإلكتروني الأكثر أمانًا</span>
+                    <span data-i18n="hero_badge">Most Secure Email Service</span>
                 </div>
 
                 <h1 class="hero-title">
                     <span class="text-gold-premium">VIP Mail</span>
                 </h1>
 
-                <p class="hero-subtitle">
-                    بريد إلكتروني يضع الأمان والخصوصية أولاً.
+                <p class="hero-subtitle" data-i18n="hero_subtitle">
+                    Email that puts security and privacy first.
                 </p>
 
                 <p class="hero-description">
-                    احصل على بريد مميز مثل <span class="text-gradient-gold">yourname@vipm.org</span> وكن في مستوى النخبة الرقمية.
+                    <span data-i18n="hero_description_prefix">Get a premium email like </span><span class="text-gradient-gold">yourname@vipm.org</span><span data-i18n="hero_description_suffix"> and be at the digital elite level.</span>
                 </p>
 
                 <div class="hero-buttons">
-                    <button class="btn-primary btn-lg">احجز بريدك الآن</button>
-                    <button class="btn-outline btn-lg">اعرف المزيد</button>
+                    <button class="btn-primary btn-lg" data-i18n="hero_btn_book">Book Your Email Now</button>
+                    <button class="btn-outline btn-lg" data-i18n="hero_btn_learn">Learn More</button>
                 </div>
 
                 <div class="scroll-indicator">
@@ -104,10 +113,10 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">
-                    <span class="text-gold-premium">مزايا استثنائية</span>
+                    <span class="text-gold-premium" data-i18n="features_title">Exceptional Features</span>
                 </h2>
-                <p class="section-description">
-                    خدمة بريد إلكتروني متكاملة مصممة خصيصًا للنخبة الرقمية
+                <p class="section-description" data-i18n="features_description">
+                    A complete email service specially designed for the digital elite
                 </p>
             </div>
 
@@ -118,8 +127,8 @@
                             <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
                         </svg>
                     </div>
-                    <h3 class="feature-title">حماية متقدمة</h3>
-                    <p class="feature-description">تشفير من الطراز العسكري لحماية رسائلك من أي اختراق أو تجسس.</p>
+                    <h3 class="feature-title" data-i18n="feature1_title">Advanced Protection</h3>
+                    <p class="feature-description" data-i18n="feature1_desc">Military-grade encryption to protect your messages from any hacking or spying.</p>
                 </div>
 
                 <div class="feature-card">
@@ -129,8 +138,8 @@
                             <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
                         </svg>
                     </div>
-                    <h3 class="feature-title">خصوصية مطلقة</h3>
-                    <p class="feature-description">بياناتك ملكك وحدك. لا نشارك معلوماتك مع أي طرف ثالث.</p>
+                    <h3 class="feature-title" data-i18n="feature2_title">Absolute Privacy</h3>
+                    <p class="feature-description" data-i18n="feature2_desc">Your data is yours alone. We don't share your information with any third party.</p>
                 </div>
 
                 <div class="feature-card">
@@ -144,8 +153,8 @@
                             <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
                         </svg>
                     </div>
-                    <h3 class="feature-title">عنوان VIP حصري</h3>
-                    <p class="feature-description">احصل على بريد إلكتروني مميز ينتهي بـ @vipm.org يعكس تميزك.</p>
+                    <h3 class="feature-title" data-i18n="feature3_title">Exclusive VIP Address</h3>
+                    <p class="feature-description" data-i18n="feature3_desc">Get a premium email ending with @vipm.org that reflects your distinction.</p>
                 </div>
 
                 <div class="feature-card">
@@ -156,8 +165,8 @@
                             <path d="M2 12h20"/>
                         </svg>
                     </div>
-                    <h3 class="feature-title">وصول عالمي</h3>
-                    <p class="feature-description">استخدم بريدك من أي مكان في العالم مع حماية كاملة.</p>
+                    <h3 class="feature-title" data-i18n="feature4_title">Global Access</h3>
+                    <p class="feature-description" data-i18n="feature4_desc">Use your email from anywhere in the world with complete protection.</p>
                 </div>
             </div>
         </div>
@@ -168,36 +177,36 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">
-                    <span class="text-gold-premium">اختر باقتك المثالية</span>
+                    <span class="text-gold-premium" data-i18n="pricing_title">Choose Your Perfect Plan</span>
                 </h2>
-                <p class="section-description">
-                    أسعار شفافة وباقات مرنة تناسب احتياجاتك
+                <p class="section-description" data-i18n="pricing_description">
+                    Transparent pricing and flexible plans to suit your needs
                 </p>
             </div>
 
             <div class="pricing-card-wrapper">
                 <div class="pricing-card">
-                    <div class="pricing-badge">🔥 عرض خاص</div>
-                    
+                    <div class="pricing-badge" data-i18n="pricing_badge">Special Offer</div>
+
                     <div class="pricing-header">
                         <h3 class="pricing-title">
-                            <span class="text-gold-premium">VIP Mail</span>
+                            <span class="text-gold-premium" data-i18n="pricing_plan_title">VIP Mail</span>
                         </h3>
-                        
+
                         <div class="pricing-price">
                             <div class="price-amount">
                                 <span class="price-value">$1</span>
-                                <span class="price-period">/لمرة واحدة</span>
+                                <span class="price-period" data-i18n="pricing_period">/One Time</span>
                             </div>
-                            <p class="price-highlight">
-                                بريدك الإلكتروني دائم طوال فترة اشتراك الدومين!
+                            <p class="price-highlight" data-i18n="pricing_highlight">
+                                Your email is permanent for the entire domain subscription period!
                             </p>
                         </div>
 
                         <div class="deal-points">
-                            <span class="deal-point">💸 دولار واحد فقط!</span>
-                            <span class="deal-point">⏰ عرض محدود</span>
-                            <span class="deal-point">🚀 تفعيل فوري</span>
+                            <span class="deal-point" data-i18n="pricing_deal1">Only $1!</span>
+                            <span class="deal-point" data-i18n="pricing_deal2">Limited Offer</span>
+                            <span class="deal-point" data-i18n="pricing_deal3">Instant Activation</span>
                         </div>
                     </div>
 
@@ -207,40 +216,40 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M20 6 9 17l-5-5"/>
                                 </svg>
-                                <span>✨ بريد إلكتروني مخصص @vipm.org</span>
+                                <span data-i18n="pricing_feature1">Custom email @vipm.org</span>
                             </li>
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M20 6 9 17l-5-5"/>
                                 </svg>
-                                <span>🎯 صالح مدى الحياة (طوال فترة اشتراك الدومين)</span>
+                                <span data-i18n="pricing_feature2">Valid for lifetime (during domain subscription)</span>
                             </li>
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M20 6 9 17l-5-5"/>
                                 </svg>
-                                <span>🔒 حماية وتشفير كامل</span>
+                                <span data-i18n="pricing_feature3">Full protection and encryption</span>
                             </li>
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M20 6 9 17l-5-5"/>
                                 </svg>
-                                <span>📧 دعم فني متواصل</span>
+                                <span data-i18n="pricing_feature4">24/7 technical support</span>
                             </li>
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M20 6 9 17l-5-5"/>
                                 </svg>
-                                <span>💎 انضم للنخبة الرقمية بسعر لا يُقاوم</span>
+                                <span data-i18n="pricing_feature5">Join the digital elite at an unbeatable price</span>
                             </li>
                         </ul>
 
-                        <button class="btn-primary btn-full">
-                            🎉 احجز الآن بدولار واحد فقط!
+                        <button class="btn-primary btn-full" data-i18n="pricing_btn">
+                            Book Now for Just $1!
                         </button>
-                        
-                        <p class="pricing-footer">
-                            ⚡ انضم لآلاف المستخدمين الذين اختاروا التميز الرقمي
+
+                        <p class="pricing-footer" data-i18n="pricing_footer">
+                            Join thousands of users who chose digital distinction
                         </p>
                     </div>
                 </div>
@@ -262,30 +271,30 @@
                         </div>
                         <span class="text-gold-premium">VIP Mail</span>
                     </div>
-                    <p>بريد إلكتروني آمن ومميز للنخبة الرقمية</p>
+                    <p data-i18n="footer_tagline">Secure and premium email for the digital elite</p>
                 </div>
 
                 <div class="footer-section">
-                    <h4>روابط سريعة</h4>
+                    <h4 data-i18n="footer_quick_links">Quick Links</h4>
                     <ul>
-                        <li><a href="#features">المزايا</a></li>
-                        <li><a href="#pricing">الأسعار</a></li>
-                        <li><a href="about.html">من نحن</a></li>
-                        <li><a href="contact.html">اتصل بنا</a></li>
+                        <li><a href="#features" data-i18n="footer_features">Features</a></li>
+                        <li><a href="#pricing" data-i18n="footer_pricing">Pricing</a></li>
+                        <li><a href="about.html" data-i18n="footer_about">About Us</a></li>
+                        <li><a href="contact.html" data-i18n="footer_contact">Contact Us</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
-                    <h4>قانوني</h4>
+                    <h4 data-i18n="footer_legal">Legal</h4>
                     <ul>
-                        <li><a href="privacy.html">سياسة الخصوصية</a></li>
-                        <li><a href="terms.html">شروط الاستخدام</a></li>
-                        <li><a href="refund.html">سياسة الاسترجاع</a></li>
+                        <li><a href="privacy.html" data-i18n="footer_privacy">Privacy Policy</a></li>
+                        <li><a href="terms.html" data-i18n="footer_terms">Terms of Service</a></li>
+                        <li><a href="refund.html" data-i18n="footer_refund">Refund Policy</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
-                    <h4>تابعنا</h4>
+                    <h4 data-i18n="footer_follow">Follow Us</h4>
                     <div class="social-links">
                         <a href="#" aria-label="Twitter">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -316,7 +325,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2025 VIP Mail. جميع الحقوق محفوظة.</p>
+                <p>&copy; 2025 VIP Mail. <span data-i18n="footer_rights">All rights reserved.</span></p>
             </div>
         </div>
     </footer>

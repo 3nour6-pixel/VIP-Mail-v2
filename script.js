@@ -283,4 +283,92 @@ if (document.querySelector('.inbox-container')) {
     });
 }
 
-console.log('VIP Mail - موقع جاهز للعمل! ✨');
+// Language switcher functionality
+let currentLang = 'en';
+
+function getBrowserLanguage() {
+    const browserLang = navigator.language || navigator.userLanguage;
+    return browserLang.startsWith('ar') ? 'ar' : 'en';
+}
+
+function setLanguage(lang) {
+    currentLang = lang;
+    localStorage.setItem('preferredLang', lang);
+
+    const htmlElement = document.documentElement;
+    htmlElement.setAttribute('lang', lang);
+    htmlElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+            if (element.tagName === 'INPUT' && element.type === 'text') {
+                element.placeholder = translations[lang][key];
+            } else {
+                element.textContent = translations[lang][key];
+            }
+        }
+    });
+
+    updateLangButtons(lang);
+}
+
+function updateLangButtons(lang) {
+    const enBtn = document.getElementById('lang-en');
+    const arBtn = document.getElementById('lang-ar');
+    const enBtnMobile = document.getElementById('lang-en-mobile');
+    const arBtnMobile = document.getElementById('lang-ar-mobile');
+
+    if (enBtn && arBtn) {
+        if (lang === 'en') {
+            enBtn.classList.add('active');
+            arBtn.classList.remove('active');
+        } else {
+            arBtn.classList.add('active');
+            enBtn.classList.remove('active');
+        }
+    }
+
+    if (enBtnMobile && arBtnMobile) {
+        if (lang === 'en') {
+            enBtnMobile.classList.add('active');
+            arBtnMobile.classList.remove('active');
+        } else {
+            arBtnMobile.classList.add('active');
+            enBtnMobile.classList.remove('active');
+        }
+    }
+}
+
+function initLanguage() {
+    const savedLang = localStorage.getItem('preferredLang');
+    const initialLang = savedLang || getBrowserLanguage();
+    setLanguage(initialLang);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    initLanguage();
+
+    const enBtn = document.getElementById('lang-en');
+    const arBtn = document.getElementById('lang-ar');
+    const enBtnMobile = document.getElementById('lang-en-mobile');
+    const arBtnMobile = document.getElementById('lang-ar-mobile');
+
+    if (enBtn) {
+        enBtn.addEventListener('click', () => setLanguage('en'));
+    }
+
+    if (arBtn) {
+        arBtn.addEventListener('click', () => setLanguage('ar'));
+    }
+
+    if (enBtnMobile) {
+        enBtnMobile.addEventListener('click', () => setLanguage('en'));
+    }
+
+    if (arBtnMobile) {
+        arBtnMobile.addEventListener('click', () => setLanguage('ar'));
+    }
+});
+
+console.log('VIP Mail - Ready to work! ✨');

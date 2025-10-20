@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VIP Mail - من نحن</title>
+    <title>VIP Mail - About Us</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <script src="translations.js"></script>
 </head>
 <body>
     <nav class="navbar">
@@ -22,15 +23,19 @@
                 </a>
 
                 <div class="nav-links">
-                    <a href="/#features">المزايا</a>
-                    <a href="/#pricing">الأسعار</a>
-                    <a href="about.html">من نحن</a>
-                    <button class="btn-login">تسجيل الدخول</button>
-                    <button class="btn-primary">احجز بريدك الآن</button>
+                    <a href="/#features" data-i18n="nav_features">Features</a>
+                    <a href="/#pricing" data-i18n="nav_pricing">Pricing</a>
+                    <a href="about.html" data-i18n="nav_about">About Us</a>
+                    <div class="lang-switcher">
+                        <button class="lang-btn" id="lang-en">EN</button>
+                        <button class="lang-btn" id="lang-ar">AR</button>
+                    </div>
+                    <button class="btn-login" data-i18n="nav_login">Sign In</button>
+                    <button class="btn-primary" data-i18n="nav_book">Book Your Email</button>
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <button class="mobile-menu-btn" aria-label="القائمة">
+                <button class="mobile-menu-btn" aria-label="Menu">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="4" x2="20" y1="12" y2="12"/>
                         <line x1="4" x2="20" y1="6" y2="6"/>
@@ -44,11 +49,15 @@
     <!-- Mobile Menu -->
     <div class="mobile-menu">
         <div class="mobile-menu-links">
-            <a href="/#features">المزايا</a>
-            <a href="/#pricing">الأسعار</a>
-            <a href="about.html">من نحن</a>
-            <button class="btn-login">تسجيل الدخول</button>
-            <button class="btn-primary">احجز بريدك الآن</button>
+            <a href="/#features" data-i18n="nav_features">Features</a>
+            <a href="/#pricing" data-i18n="nav_pricing">Pricing</a>
+            <a href="about.html" data-i18n="nav_about">About Us</a>
+            <div class="lang-switcher" style="justify-content: center; margin: 1rem 0;">
+                <button class="lang-btn" id="lang-en-mobile">EN</button>
+                <button class="lang-btn" id="lang-ar-mobile">AR</button>
+            </div>
+            <button class="btn-login" data-i18n="nav_login">Sign In</button>
+            <button class="btn-primary" data-i18n="nav_book">Book Your Email</button>
         </div>
     </div>
     
@@ -56,28 +65,28 @@
         <div class="container" style="max-width: 800px; margin: 0 auto; background: var(--card); padding: 2.5rem; border-radius: 0.75rem; border: 1px solid var(--border);">
             
             <h1 class="section-title" style="text-align: center; margin-bottom: 2rem;">
-                <span class="text-gold-premium">من نحن</span>
+                <span class="text-gold-premium" data-i18n="about_title">About Us</span>
             </h1>
-            
-            <p style="font-size: 1.15rem; margin-bottom: 1.5rem; line-height: 1.8; color: var(--foreground);">
-                نحن VIP Mail، خدمة البريد الإلكتروني المصممة خصيصًا للنخبة الرقمية التي تضع الأمان والخصوصية فوق كل اعتبار. رؤيتنا هي أن نكون الملاذ الرقمي الآمن لهويتك المهنية والشخصية في عالم متسارع.
+
+            <p style="font-size: 1.15rem; margin-bottom: 1.5rem; line-height: 1.8; color: var(--foreground);" data-i18n="about_intro">
+                We are VIP Mail, an email service specially designed for the digital elite who put security and privacy above all else. Our vision is to be the secure digital haven for your professional and personal identity in a fast-paced world.
             </p>
-            
-            <h2 style="font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; color: var(--gold);">
-                قيمنا الأساسية
+
+            <h2 style="font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; color: var(--gold);" data-i18n="about_values_title">
+                Our Core Values
             </h2>
-            <ul style="list-style: none; padding-right: 0; margin-bottom: 2rem;">
+            <ul style="list-style: none; padding-left: 0; padding-right: 0; margin-bottom: 2rem;">
                 <li style="margin-bottom: 1rem; color: var(--muted-foreground); display: flex; align-items: flex-start; gap: 0.5rem;">
                     <span style="color: var(--gold); font-size: 1.5rem;">•</span>
-                    الخصوصية المطلقة: نحن لا نبيع بياناتك، ولا نتتبع رسائلك، ولا نشارك معلوماتك مع أي طرف ثالث. بياناتك ملكك وحدك.
+                    <span data-i18n="about_value1">Absolute Privacy: We don't sell your data, track your messages, or share your information with any third party. Your data is yours alone.</span>
                 </li>
                 <li style="margin-bottom: 1rem; color: var(--muted-foreground); display: flex; align-items: flex-start; gap: 0.5rem;">
                     <span style="color: var(--gold); font-size: 1.5rem;">•</span>
-                    الأمان العسكري: نستخدم أعلى مستويات التشفير لحماية جميع مراسلاتك من أي اختراق أو تجسس.
+                    <span data-i18n="about_value2">Military-Grade Security: We use the highest levels of encryption to protect all your correspondence from any hacking or spying.</span>
                 </li>
                 <li style="margin-bottom: 1rem; color: var(--muted-foreground); display: flex; align-items: flex-start; gap: 0.5rem;">
                     <span style="color: var(--gold); font-size: 1.5rem;">•</span>
-                    التفرد والتميز: عنوان بريدك الإلكتروني المميز (@vipm.org) هو انعكاس لهويتك الرقمية الراقية.
+                    <span data-i18n="about_value3">Uniqueness and Distinction: Your premium email address (@vipm.org) is a reflection of your sophisticated digital identity.</span>
                 </li>
             </ul>
         </div>
@@ -96,30 +105,30 @@
                         </div>
                         <span class="text-gold-premium">VIP Mail</span>
                     </div>
-                    <p>بريد إلكتروني آمن ومميز للنخبة الرقمية</p>
+                    <p data-i18n="footer_tagline">Secure and premium email for the digital elite</p>
                 </div>
 
                 <div class="footer-section">
-                    <h4>روابط سريعة</h4>
+                    <h4 data-i18n="footer_quick_links">Quick Links</h4>
                     <ul>
-                        <li><a href="/#features">المزايا</a></li>
-                        <li><a href="/#pricing">الأسعار</a></li>
-                        <li><a href="about.html">من نحن</a></li>
-                        <li><a href="contact.html">اتصل بنا</a></li>
+                        <li><a href="/#features" data-i18n="footer_features">Features</a></li>
+                        <li><a href="/#pricing" data-i18n="footer_pricing">Pricing</a></li>
+                        <li><a href="about.html" data-i18n="footer_about">About Us</a></li>
+                        <li><a href="contact.html" data-i18n="footer_contact">Contact Us</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
-                    <h4>قانوني</h4>
+                    <h4 data-i18n="footer_legal">Legal</h4>
                     <ul>
-                        <li><a href="privacy.html">سياسة الخصوصية</a></li>
-                        <li><a href="terms.html">شروط الاستخدام</a></li>
-                        <li><a href="refund.html">سياسة الاسترجاع</a></li>
+                        <li><a href="privacy.html" data-i18n="footer_privacy">Privacy Policy</a></li>
+                        <li><a href="terms.html" data-i18n="footer_terms">Terms of Service</a></li>
+                        <li><a href="refund.html" data-i18n="footer_refund">Refund Policy</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
-                    <h4>تابعنا</h4>
+                    <h4 data-i18n="footer_follow">Follow Us</h4>
                     <div class="social-links">
                         <a href="#" aria-label="Twitter">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -150,7 +159,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2025 VIP Mail. جميع الحقوق محفوظة.</p>
+                <p>&copy; 2025 VIP Mail. <span data-i18n="footer_rights">All rights reserved.</span></p>
             </div>
         </div>
     </footer> 
